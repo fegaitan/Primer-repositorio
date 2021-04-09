@@ -1,0 +1,188 @@
+<!DOCTYPE html> <!--Declaración de tipo de documento-->
+<html lang="en"> <!--Idioma, por default es inglés-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*CSS puede ser aplicado tanto inline, como interno en la etiqueta head con la etiqueta style:
+        style
+            h1{
+                background-color:tomato;
+            }
+        style
+        */
+        .ejemploCSS{
+            color:mediumslateblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:30px;
+            border:2px solid tomato;
+            padding:10px;
+            margin:30px;
+        }
+        .ejemplolink a{
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        .ejemplolink a:visited{
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        .ejemplolink a:hover{
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        .ejemplolink a:active{
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        /*Con CSS podemos cambiar el diseño de los links en cada uno de sus estados: normal,visited,hover,
+        active (LOVE HATE). Recordemos cambiar su diseño en ese orden para no tener problemas */
+        .ejemplolinkboton a:link,a:visited{
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .ejemplolinkboton a:hover,a:active{
+            background-color: red;
+        }
+        /*También podemos utilizar CSS para diseñar nuestros links de forma que parezcan un botón*/
+        .imagenfondo{
+            background-image: url("Prueba/imagenes/FG\ Logo\ BW.png");
+        }
+        /*Podemos aplicar una imagen de fondo a cualquier objeto HTML. Para aplicarla a toda la página
+        usamos la etiqueta body*/
+        /*Si la imagen es mas pequeña que el elemento, se repetirá horizontal y verticalmente hasta llegar
+        al final del elemento. Para modificar esto usamos la propiedad background-repeat. Con el valor
+        no-repeat deja de repetirse.*/
+        /*Si queremos que la imagen cubra todo el elemento usamos la propiedad background-cover con el valor
+        cover*/
+        /*Para asegurarnos que el elemento está siempre cubierto podemos utilizar la propiedad
+        background-attachement con el valor fixed/*
+        /*Si queremos que la imagen se estire para ocupar todo el espacio en el elemento podemos usar la 
+        propiedad background-size con el valor 100% 100%*/
+    </style>
+    <link href="estilos.css" rel="stylesheet"> <!--Podemos linkear a una página CSS externa usando la 
+    etiqueta link-->
+    <title>Document</title>
+</head>
+<body style="background-color: azure;"> <!--Parte visible--> 
+    <!--El atributo background-color de style cambia el color de fondo del elemento-->
+    <h1 style="font-family: 'Courier New', Courier, monospace;">My first heading</h1> <!--Título grande-->
+    <!--La propiedad font-family cambia el tipo de fuente del elemento-->
+    <p style="font-size:30px">My first paragraph</p> <!--Párrafo-->
+    <!--font-size define el tamaño de la letra de un elemento-->
+    <br> <!-- Cambio de linea - Elemento vacio -->
+    <h1 style="text-align: center;">Título</h1> <!--Título mas importante-->
+    <!--La propiedad text-align define el alineamiento horizontal del texto del elemento-->
+    <h2><b>Título</b></h2>
+    <!--b define texto en negrita pero sin importancia a nivel meta-->
+    <h3><strong>Título</strong></h3>
+    <!--strong define texto con fuerte importancia-->
+    <h4><i>Título</i></h4>
+    <!--i muestra el texto en cursiva-->
+    <h5><em>Título</em></h5>
+    <!--em le da enfasis al texto-->
+    <h6><small>Título</small></h6> <!--Título menos importante-->
+    <!--small define texto mas pequeño de lo normal-->
+    <!--Si bien los headings tienen un tamaño estandar se los puede modificar con
+    style="font-size"-->
+    <a href="htmltutorial.html">Index</a> <!--Link
+    href especifica la dirección a la que lleva el link-->
+    <img src="imagenes\FG Logo BW.png" alt="Logo FG" width="300" height="100"> 
+    <!--Imagen - Los atributos alt,width y height corresponden a img
+        src especifica la dirección donde se encuentra la imagen
+        width and height especifican el ancho y la altura en píxeles pero no llevan px -->
+        <!--Igualmente para indicar el ancho y alto se sugiere utilizar el atributo style
+        con las propiedades width y height-->
+    <p style="color:red;">This is a red paragraph</p> <!--Style marca el estilo del elemento-->
+    <!--La propiedad color cambia el color del texto del elemento-->
+    <p title="I'm a tooltip">This is a paragraph</p> 
+    <!--Puede ser usada para marcar una ayuda al pasar el mouse por encima del area-->
+    <hr> <!--Linea horizontal - Es utilizado para marcar un cambio de tema en la página web-->
+    <pre>
+        Este texto será mostrado
+        
+        tal como ha sido escrito
+    </pre>
+    <!--Es utilizado para mostrar texto con el formato con el que se lo copió y no el de HTML-->
+    <p><mark>Párrafo</mark></p>
+    <!--mark define texto que debe ser resaltado-->
+    <p><del>Párrafo</del></p>
+    <!--del muestra texto que debería ser borrado, lo suelen mostrar tachado-->
+    <p><ins>Párrafo</ins></p>
+    <!--ins muestra texto que se ha insertado en un documento, se suele mostrar subrayado-->
+    <p>Este es un <sub>párrafo</sub></p>
+    <!--sub se utiliza para fórmulas químicas, muestra el texto mas abajo-->
+    <p>Este es un <sup>párrafo</sup></p>
+    <!--sup se suele utilizar para notas-->
+    <p><blockquote>Este es un párrafo</blockquote></p>
+    <!--Blockquote se suele utilizar para citas, el atributo cite permite indicar de donde proviene
+    la cita empleada-->
+    <p>Este es un <q>párrafo</q></p>
+    <!--q se suele usar para citas cortas-->
+    <p>Este es un párrafo sobre <abbr title="Hyper Text Mark Language">HTML</abbr></p>
+    <!--abbr se usa para abreviaturas, con el atributo title indicamos el significado de la misma-->
+    <address>fgaitan2111@gmail.com</address>
+    <!--address se suele usar para información de contacto-->
+    <p>Este es un párrafo que podría haber sido incluido en <cite>El señor de los anillos</cite></p>
+    <!--cite se utiliza para referir a una obra creativa, no asi a su autor/a-->
+    <p><bdo dir="rtl">Este es un párrafo</bdo></p>
+    <!--bdo invierte la dirección en que se escribe el texto con el atributo rtl-->
+    <p style="background-color:dodgerblue;">Este es un párrafo</p>
+    <!--REPASAR QUOTATIONS-->
+    <p style="border:1px solid tomato">Este es un párrafo</p>
+    <!--Para declarar un borde en el atributo style usamos la propiedad border y declaramos
+    el tamaño en píxeles del borde, el tipo de borde y el color-->
+
+    <!--El color también se puede indicar utilizando RGBA y HSLA que agregan un valor llamado
+    Alpha a los tres valores del color, permitiendo trabajar la opacidad del mismo-->
+    <!--El valor alpha es un número entre 0.0 y 1.0-->
+    <p style="background-color:rgba(255, 25, 161, 0.3);">Este es un párrafo con transparencia RGBA</p>
+    <p class="ejemploCSS">Este es el párrafo de ejemplo CSS</p>
+    <a href="htmltutorial.html" target="_blank">Link</a>
+    <!--El atributo target permite indicar donde se abre el link
+    _self: Default
+    _blank: Nueva pestaña
+    _parent: Marco padre
+    _top Parte superior de la ventana-->
+    <a href="htmltutorial.html"><img src="/Prueba/imagenes/FG Logo BW.png" alt="Linktutorial"></a>
+    <!--Se puede insertar también un link dentro de una imagen-->
+    <a href="mailto:fgaitan2111@gmail.com">Enviar mail</a>
+    <!--Ingresando el valor mailto: en href podemos indicar una dirección de mail para enviar un correo
+    al cliquear-->
+    <a href="htmltutorial.html" title="Index">Link</a>
+    <!--El atributo title nos permite mostrar información sobre el link cuando pasamos el mouse sobre el-->
+    <div class="ejemplolink">
+        <a href="htmltutorial.html" title="Index">Link</a>
+    </div>
+    <div class="ejemplolinkboton">
+        <a href="htmltutorial.html" title="Index">Link</a>
+    </div>
+    <h2 id="C4">Chapter 4</h2>
+    <a href="#C4">Jump to chapter 4</a>
+    <!--Usando el atributo id se puede setear un bookmark en la página para despues linkear utilizando un
+    link de a-->
+    <a href="htmltutorial.html#C4">Jump to chapter 4</a>
+    <!--También se puede linkear a un bookmark que se encuentre en otra página-->
+    <img src="Prueba/imagenes/FG Logo BW.png" alt="logofg" style="width:400px;height:100px;float:right">
+    <!--Podemos usar la propiedad float de CSS para hacer que una imagen flote a la izquierda o derecha
+    de un texto-->
+    <img src="Prueba/imagenes/FG Logo BW.png" alt="logofg" usemap="#logo">
+    <map name="logo">
+        <area shape="rect" coords="500, 44, 270, 350" href="index.html">
+    </map>
+    <!--Utilizando la propiedad map se puede definir un mapa de imagen que permite que cliqueando en
+    diferentes partes de la imagen nos lleve a un link determinado-->
+    <div class="imagenfondo">
+    
+    </div>
+</body>
+</html>
